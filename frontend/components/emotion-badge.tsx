@@ -43,15 +43,16 @@ export function EmotionBadge({
     <span
       className={cn(
         "inline-flex items-center gap-2 px-4 py-2 rounded-full font-mono text-sm font-medium",
-        "backdrop-blur-xl transition-all duration-300 animate-badge-float",
+        "backdrop-blur-xl transition-all duration-300 animate-spring-pop",
         "hover:scale-105",
         className
       )}
       style={{
-        background: "rgba(255, 255, 255, 0.05)",
+        background: "linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01))",
         border: `1px solid ${color}50`,
+        borderTopColor: `${color}80`,
         color: color,
-        boxShadow: `0 0 20px ${color}20`,
+        boxShadow: `0 0 20px ${color}20, inset 0 1px 1px rgba(255, 255, 255, 0.15)`,
         animationDelay: `${animationDelay}s`,
       }}
     >
