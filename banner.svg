@@ -1,0 +1,135 @@
+<svg width="900" height="200" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a1628;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="200" fill="url(#bg)" rx="16"/>
+
+  <!-- Animated blobs -->
+  <circle cx="100" cy="60" r="120" fill="#7c3aed" opacity="0.12" filter="url(#softglow)">
+    <animate attributeName="r" values="120;140;120" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.12;0.18;0.12" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="140" r="100" fill="#06b6d4" opacity="0.10" filter="url(#softglow)">
+    <animate attributeName="r" values="100;120;100" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.10;0.16;0.10" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="500" cy="180" r="80" fill="#ec4899" opacity="0.08" filter="url(#softglow)">
+    <animate attributeName="r" values="80;100;80" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Grid lines -->
+  <line x1="0" y1="40" x2="900" y2="40" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="80" x2="900" y2="80" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="120" x2="900" y2="120" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="0" y1="160" x2="900" y2="160" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="180" y1="0" x2="180" y2="200" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="360" y1="0" x2="360" y2="200" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="540" y1="0" x2="540" y2="200" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="720" y1="0" x2="720" y2="200" stroke="white" stroke-opacity="0.03" stroke-width="1"/>
+
+  <!-- Floating particles -->
+  <text x="60" y="180" font-size="16" opacity="0.15" fill="#FFD700">✦
+    <animate attributeName="y" values="180;20;180" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.0;0.2;0.0" dur="10s" repeatCount="indefinite"/>
+  </text>
+  <text x="200" y="160" font-size="12" opacity="0.12" fill="#4FC3F7">◈
+    <animate attributeName="y" values="160;10;160" dur="13s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.0;0.15;0.0" dur="13s" repeatCount="indefinite"/>
+  </text>
+  <text x="750" y="170" font-size="14" opacity="0.12" fill="#FF6B35">⚡
+    <animate attributeName="y" values="170;15;170" dur="9s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.0;0.18;0.0" dur="9s" repeatCount="indefinite"/>
+  </text>
+  <text x="850" y="150" font-size="11" opacity="0.10" fill="#AA00FF">★
+    <animate attributeName="y" values="150;10;150" dur="12s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.0;0.14;0.0" dur="12s" repeatCount="indefinite"/>
+  </text>
+  <text x="400" y="175" font-size="10" opacity="0.10" fill="#76FF03">◆
+    <animate attributeName="y" values="175;20;175" dur="15s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.0;0.12;0.0" dur="15s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Cipher fragments floating -->
+  <text x="30" y="140" font-family="monospace" font-size="9" fill="#00ff88" opacity="0.06">X7@kP#9aZ
+    <animate attributeName="y" values="140;-10;140" dur="18s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.0;0.08;0.0" dur="18s" repeatCount="indefinite"/>
+  </text>
+  <text x="820" y="130" font-family="monospace" font-size="9" fill="#00ff88" opacity="0.06">vT$7Lp#Q
+    <animate attributeName="y" values="130;-10;130" dur="20s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.0;0.08;0.0" dur="20s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Lock icon -->
+  <text x="50" y="115" font-size="48" filter="url(#glow)" opacity="0.9">🔐
+    <animate attributeName="opacity" values="0.9;0.6;0.9" dur="3s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Main title -->
+  <text x="450" y="90" font-family="Georgia, serif" font-size="42" font-style="italic"
+        font-weight="300" text-anchor="middle" fill="url(#textGrad)" filter="url(#glow)">
+    mini Emotion Cipher
+    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="450" y="118" font-family="'Courier New', monospace" font-size="13"
+        text-anchor="middle" fill="white" opacity="0.45" letter-spacing="2">
+    feelings stay readable · words stay private
+  </text>
+
+  <!-- Emotion pills -->
+  <g transform="translate(270, 138)">
+    <rect width="52" height="22" rx="11" fill="#FFD700" opacity="0.15" stroke="#FFD700" stroke-width="0.5" stroke-opacity="0.4"/>
+    <text x="26" y="15" font-family="monospace" font-size="10" text-anchor="middle" fill="#FFD700">✦ joy</text>
+  </g>
+  <g transform="translate(332, 138)">
+    <rect width="68" height="22" rx="11" fill="#4FC3F7" opacity="0.15" stroke="#4FC3F7" stroke-width="0.5" stroke-opacity="0.4"/>
+    <text x="34" y="15" font-family="monospace" font-size="10" text-anchor="middle" fill="#4FC3F7">◈ sadness</text>
+  </g>
+  <g transform="translate(410, 138)">
+    <rect width="62" height="22" rx="11" fill="#FF1744" opacity="0.15" stroke="#FF1744" stroke-width="0.5" stroke-opacity="0.4"/>
+    <text x="31" y="15" font-family="monospace" font-size="10" text-anchor="middle" fill="#FF1744">▲ anger</text>
+  </g>
+  <g transform="translate(482, 138)">
+    <rect width="58" height="22" rx="11" fill="#AA00FF" opacity="0.15" stroke="#AA00FF" stroke-width="0.5" stroke-opacity="0.4"/>
+    <text x="29" y="15" font-family="monospace" font-size="10" text-anchor="middle" fill="#AA00FF">◉ fear</text>
+  </g>
+  <g transform="translate(550, 138)">
+    <rect width="80" height="22" rx="11" fill="#FF6B35" opacity="0.15" stroke="#FF6B35" stroke-width="0.5" stroke-opacity="0.4"/>
+    <text x="40" y="15" font-family="monospace" font-size="10" text-anchor="middle" fill="#FF6B35">⚡ surprise</text>
+  </g>
+
+  <!-- AES badge -->
+  <g transform="translate(340, 168)">
+    <rect width="220" height="20" rx="10" fill="white" opacity="0.04" stroke="white" stroke-width="0.5" stroke-opacity="0.1"/>
+    <text x="110" y="14" font-family="monospace" font-size="9" text-anchor="middle" fill="white" opacity="0.3" letter-spacing="1">AES-256 · HuggingFace · Next.js · Flask</text>
+  </g>
+
+  <!-- Border -->
+  <rect width="899" height="199" fill="none" stroke="url(#textGrad)" stroke-width="1" stroke-opacity="0.3" rx="16"/>
+</svg>
