@@ -39,7 +39,13 @@ const SUGGESTIONS = [
   "I feel completely lost right now",
   "Everything is falling into place ✨"
 ];
-
+// Keep Render server alive — ping every 10 minutes
+useEffect(() => {
+  const ping = () => fetch(`${API_URL}/health`).catch(() => {});
+  ping(); // ping immediately on load
+  const interval = setInterval(ping, 10 * 60 * 1000); // every 10 min
+  return () => clearInterval(interval);
+}, []);
 const EMOTION_COLORS: Record<string, string> = {
   joy: "#FFD700", excitement: "#FF6B35", sadness: "#4FC3F7", anger: "#FF1744",
   fear: "#AA00FF", love: "#FF4081", surprise: "#00E5FF", nervousness: "#FF9100",
