@@ -319,7 +319,7 @@ def derive_key(emotions: list[dict]) -> bytes:
     # 32 bytes = AES-256 key
 ```
 
-The emotion isn't just metadata — it **actively participates in cryptography**.  
+The emotion isn't just metadata - it **actively participates in cryptography**.  
 Try decrypting with the wrong emotion → you get garbage.  
 This cryptographically **proves** the emotion was correctly identified. ✅
 
@@ -352,6 +352,7 @@ This cryptographically **proves** the emotion was correctly identified. ✅
 [![🔐 Try mini Emotion Cipher](https://img.shields.io/badge/🔐_Try_mini_Emotion_Cipher_Now-7c3aed?style=for-the-badge)](https://mini-emotion-cipher.vercel.app)
 
 </div>
+
 
 
 
