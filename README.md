@@ -23,7 +23,7 @@
 
 > ### *"Words stay private. Feelings stay readable."*
 > An intelligent system that encrypts your messages using **AES-256**
-> while preserving their **emotional signature** — detectable by AI even through encryption.
+> while preserving their **emotional signature**  detectable by AI even through encryption.
 
 </div>
 
@@ -64,7 +64,7 @@ Most encryption systems hide *everything* — text, tone, and feeling alike.
 
 **mini Emotion Cipher** is different. It uses the **emotion itself as part of the AES key**, so:
 - 🔐 Your **words** are completely encrypted
-- 💛 Your **feeling** is embedded in the cipher — readable by AI, invisible to humans
+- 💛 Your **feeling** is embedded in the cipher - readable by AI, invisible to humans
 - 🔁 The **full message** is recovered later using the emotion package
 
 ---
@@ -112,7 +112,7 @@ joy:0.9610||I just got the job offer! I'm so thrilled and can't wait to start!
 }
 ```
 
-> 📦 Share this JSON — anyone can decrypt to recover the original message AND the emotion!
+> 📦 Share this JSON - anyone can decrypt to recover the original message AND the emotion!
 
 ---
 
@@ -120,23 +120,23 @@ joy:0.9610||I just got the job offer! I'm so thrilled and can't wait to start!
 
 ```
 ┌────────────────────────────────────────────────────────────────────┐
-│                   FRONTEND · Next.js · Vercel                       │
-│                                                                      │
-│   ╔══════════════╗               ╔══════════════════╗               │
-│   ║  ⚿ ENCRYPT   ║               ║    ◈ DECRYPT      ║               │
-│   ║  Type message║               ║  Paste JSON pkg  ║               │
-│   ║  POST/encrypt║               ║  POST /decrypt   ║               │
-│   ╚══════╤═══════╝               ╚════════╤═════════╝               │
+│                   FRONTEND · Next.js · Vercel                      │
+│                                                                    │
+│   ╔══════════════╗               ╔══════════════════╗              │
+│   ║  ⚿ ENCRYPT  ║               ║    ◈ DECRYPT     ║              │
+│   ║  Type message║               ║  Paste JSON pkg  ║              │
+│   ║  POST/encrypt║               ║  POST /decrypt   ║              │
+│   ╚══════╤═══════╝               ╚════════╤═════════╝              │
 └──────────┼────────────────────────────────┼────────────────────────┘
            │                                │
            ▼                                ▼
 ┌────────────────────────────────────────────────────────────────────┐
-│                    BACKEND · Flask · Render                          │
-│                                                                      │
+│                    BACKEND · Flask · Render                        │
+│                                                                    │
 │   ┌──────────────────┐      ┌───────────────────────────────────┐  │
 │   │  emotion.py      │      │  cipher.py                        │  │
 │   │                  │      │                                   │  │
-│   │ HuggingFace API  │─────▶│  payload = "joy:0.96||text"       │  │
+│   │ HuggingFace API  │────▶│  payload = "joy:0.96||text"       │  │
 │   │ distilroberta    │      │  key     = SHA256(emotion_str)    │  │
 │   │ → emotions[]     │      │  ct      = AES256_CBC(payload,key)│  │
 │   └──────────────────┘      └───────────────────────────────────┘  │
@@ -328,7 +328,7 @@ This cryptographically **proves** the emotion was correctly identified. ✅
 ## 🔮 Future Scope
 
 - [ ] Multi-language emotion detection
-- [ ] Threshold decryption — message only decryptable if emotion score > X%
+- [ ] Threshold decryption - message only decryptable if emotion score > X%
 - [ ] Emotion timeline visualization across conversations
 - [ ] Browser extension for encrypting emails
 - [ ] Mobile app with biometric + emotion dual-authentication
@@ -352,5 +352,6 @@ This cryptographically **proves** the emotion was correctly identified. ✅
 [![🔐 Try mini Emotion Cipher](https://img.shields.io/badge/🔐_Try_mini_Emotion_Cipher_Now-7c3aed?style=for-the-badge)](https://mini-emotion-cipher.vercel.app)
 
 </div>
+
 
 
